@@ -6,6 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: build
-        run: docker build . --file Dockerfile -t docker.pkg.github.com/mokhan/asdfjkl/asdfjkl:latest
-        run: docker login docker.pkg.github.com -u mokhan -p ${{ secrets.GITHUB_TOKEN }}
-        run: docker push docker.pkg.github.com/mokhan/asdfjkl/asdfjkl:latest
+        run: |
+          docker build . --file Dockerfile -t docker.pkg.github.com/mokhan/asdfjkl/asdfjkl:latest
+          docker login docker.pkg.github.com -u mokhan -p ${{ secrets.GITHUB_TOKEN }}
+          docker push docker.pkg.github.com/mokhan/asdfjkl/asdfjkl:latest
