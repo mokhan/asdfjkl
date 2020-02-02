@@ -47,7 +47,6 @@ RUN git clone --depth 1 https://github.com/asdf-vm/asdf.git $HOME/.asdf && \
   echo '. $HOME/.asdf/asdf.sh' >> $HOME/.profile && \
   echo '. $HOME/.asdf/completions/asdf.bash' >> $HOME/.profile && \
   echo 'legacy_version_file = yes' >> $HOME/.tool-versions && \
-  asdf plugin-add dotnet-core && \
   asdf plugin-add golang && \
   asdf plugin-add java && \
   asdf plugin-add maven && \
@@ -62,16 +61,14 @@ RUN git clone --depth 1 https://github.com/asdf-vm/asdf.git $HOME/.asdf && \
   asdf install maven 3.6.3 && \
   asdf install nodejs 13.3.0 && \
   asdf install php 7.4.0 && \
-  asdf install python 2.7.17 && \
   asdf install python 3.8.0 && \
-  asdf install ruby 2.6.5 && \
+  asdf install ruby 2.7.0 && \
   asdf install yarn 1.21.0 && \
   asdf global golang 1.13.5 && \
   asdf global java adopt-openjdk-13.0.1+9 && \
   asdf global maven 3.6.3 && \
   asdf global nodejs 13.3.0 && \
   asdf global php 7.4.0 && \
-  asdf global python 2.7.17 && \
   asdf global python 3.8.0 && \
   asdf install ruby 2.6.5 && \
   asdf global yarn 1.21.0
